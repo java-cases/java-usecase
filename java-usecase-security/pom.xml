@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.kenly</groupId>
-    <artifactId>java-usecase-parent</artifactId>
+    <artifactId>java-usecase-security</artifactId>
     <version>1.2.0</version>
-    <packaging>pom</packaging>
-    <name>${project.artifactId}</name>
-    <description>java usecase parent</description>
-
-    <modules>
-        <module>java-usecase-dependencies</module>
-        <module>java-usecase-mock</module>
-        <module>java-usecase-lombok</module>
-        <module>java-usecase-google</module>
-        <module>java-usecase-commons</module>
-        <module>java-usecase-apache-commons</module>
-        <module>java-usecase-security</module>
-        <module>java-usecase-demo-starter</module>
-        <module>java-usecase-spring-boot</module>
-        <module>java-usecase-aop</module>
-        <module>java-usecase-vertx</module>
-    </modules>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -45,8 +31,16 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
         </dependency>
     </dependencies>
 
