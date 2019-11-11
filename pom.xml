@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.kenly</groupId>
+    <artifactId>java-usecase-parent</artifactId>
+    <version>1.2.0</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>java usecase parent</description>
+
+    <modules>
+        <module>java-usecase-dependencies</module>
+        <module>java-usecase-mock</module>
+        <module>java-usecase-lombok</module>
+        <module>java-usecase-google</module>
+        <module>java-usecase-commons</module>
+        <module>java-usecase-apache-commons</module>
+        <module>java-usecase-demo-starter</module>
+        <module>java-usecase-spring-boot</module>
+        <module>java-usecase-aop</module>
+        <module>java-usecase-vertx</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.1.9.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  ssl.enabled: false
+  ssl.key-store: classpath:servicehive.jks
+  ssl.key-store-password: 123456
+  ssl.key-store-type: PKCS12
+  ssl.keyAlias: eureka-client
+
+management:
+  security.enabled: false
+  health.sensitive: false
+  health.enabled: true
+  ssl.enabled: false
+  address: 0.0.0.0
+  port: 8090
+
+demo:
+  key: value
+
+spring:
+  application.name: java-usecase-com
+  profiles.active: prod

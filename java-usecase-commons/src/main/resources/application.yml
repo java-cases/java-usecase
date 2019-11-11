@@ -1,0 +1,48 @@
+server:
+  port: 8080
+  ssl.enabled: false
+  ssl.key-store: classpath:servicehive.jks
+  ssl.key-store-password: 123456
+  ssl.key-store-type: PKCS12
+  ssl.keyAlias: eureka-client
+
+org.owasp.esapi.resources: classpath:org.owasp.org.owasp.esapi/ESAPI.properties
+
+management:
+  security.enabled: false
+  health.sensitive: false
+  health.enabled: true
+  ssl.enabled: false
+  address: 0.0.0.0
+  port: 8090
+
+demo:
+  key: value
+
+spring:
+  application.name: demo-hr-kenly
+  profiles.active: prod
+
+eureka:
+  client:
+    serviceUrl.defaultZone: http://eureka-server1.demo.svc.cluster.local:8761/eureka/,http://eureka-server2.demo.svc.cluster.local:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+    region: cn-east-1
+  instance:
+    prefer-ip-address: true
+    non-secure-port-enabled: true
+---
+spring:
+  profiles: prod
+eureka:
+  instance:
+    metadata-map:
+      env: prod
+---
+spring:
+  profiles: canary
+eureka:
+  instance:
+    metadata-map:
+      env: canary

@@ -1,0 +1,6 @@
+基本类型对应的缓冲池如下：
+- boolean values true and false
+- all byte values
+- short values between -128 and 127
+- int values between -128 and 127
+- char in the range \u0000 to \u007F
