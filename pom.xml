@@ -12,6 +12,7 @@
     <modules>
         <module>java-usecase-dependencies</module>
         <module>java-usecase-junit5</module>
+        <module>java-usecase-staticchecking</module>
         <module>java-usecase-mock</module>
         <module>java-usecase-lombok</module>
         <module>java-usecase-google</module>
