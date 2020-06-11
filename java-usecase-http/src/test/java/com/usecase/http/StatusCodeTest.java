@@ -2,7 +2,7 @@ package com.usecase.http;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StatusCodeTest {
 
@@ -17,7 +17,7 @@ class StatusCodeTest {
         assertEquals(502, StatusCode.BAD_GATEWAY.getCode());
         assertEquals(503, StatusCode.SERVICE_UNAVAILABLE.getCode());
         assertEquals(504, StatusCode.GATEWAY_TIMEOUT.getCode());
-        assertEquals(505, StatusCode.VERSION_NOT_SUPPORTED.getCode());
+        assertEquals(505, StatusCode.HTTP_VERSION_NOT_SUPPORTED.getCode());
 
         assertEquals(0, StatusCode.UNKNOWN_CODE.getCode());
     }
@@ -33,7 +33,7 @@ class StatusCodeTest {
         assertEquals(StatusCode.BAD_GATEWAY, StatusCode.from(502));
         assertEquals(StatusCode.SERVICE_UNAVAILABLE, StatusCode.from(503));
         assertEquals(StatusCode.GATEWAY_TIMEOUT, StatusCode.from(504));
-        assertEquals(StatusCode.VERSION_NOT_SUPPORTED, StatusCode.from(505));
+        assertEquals(StatusCode.HTTP_VERSION_NOT_SUPPORTED, StatusCode.from(505));
 
         assertEquals(StatusCode.UNKNOWN_CODE, StatusCode.from(0));
     }
