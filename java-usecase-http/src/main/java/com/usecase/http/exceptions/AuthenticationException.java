@@ -18,8 +18,4 @@ public class AuthenticationException extends ResponseException {
     public AuthenticationException(String message, StatusCode status, String body) {
         super(message, status, body);
     }
-
-    public String getBody() {
-        return body;
-    }
 }

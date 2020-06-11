@@ -23,20 +23,4 @@ public class ServerException extends ResponseException {
 		super(message, status, body);
 		this.status = status;
 	}
-
-	public StatusCode getStatusCode() {
-		return status;
-	}
-
-	public String getBody(){
-		return body;
-	}
-
-	@Override
-	public String toString() {
-		return "ServerException{" +
-				"status=" + status +
-				", body='" + body + '\'' +
-				'}';
-	}
 }

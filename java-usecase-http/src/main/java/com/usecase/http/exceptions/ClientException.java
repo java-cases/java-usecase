@@ -23,23 +23,4 @@ public class ClientException extends ResponseException {
 		super(message, status, body);
 		this.status = status;
 	}
-
-	public StatusCode getStatusCode() {
-		return status;
-	}
-
-	public String getBody(){
-		return body;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public String toString() {
-		return "ClientException{" +
-				"status=" + status +
-				", body='" + body + '\'' +
-				'}';
-	}
 }

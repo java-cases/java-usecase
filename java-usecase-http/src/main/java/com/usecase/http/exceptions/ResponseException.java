@@ -34,11 +34,10 @@ package com.usecase.http.exceptions;
 import com.usecase.http.StatusCode;
 
 public class ResponseException extends Exception {
-
     private static final long serialVersionUID = 7294957362769575271L;
 
-    protected StatusCode status;
-    protected String body;
+    private final StatusCode status;
+    private String body;
 
     public ResponseException(String message, StatusCode status) {
         super(message);
@@ -76,15 +75,20 @@ public class ResponseException extends Exception {
         return new ResponseException(message, status, cause);
     }
 
+    public String getBody() {
+        return body;
+    }
+
     public StatusCode getStatus() {
         return status;
     }
 
     @Override
     public String toString() {
-        return "ResponseException{" +
-                "status=" + status +
-                ", body='" + body + '\'' +
+        return "{" +
+                "message='" + this.getMessage() + '\'' +
+                ", status=" + this.status +
+                ", body='" + this.body + '\'' +
                 '}';
     }
 
