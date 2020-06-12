@@ -1,24 +1,11 @@
-package com.usecase;
+package com.usecase.service.rental;
 
 import com.usecase.service.price.Price;
 import com.usecase.service.price.PriceCodes;
-import com.usecase.service.rental.Movie;
-import com.usecase.service.rental.Rental;
-import lombok.extern.java.Log;
 
-//@SneakyThrows
-@Log
-public class Application {
+public class RentalInstances {
 
-    public static void main(String[] args) {
-        log.info("Application.main()");
-
-        System.out.println(buildRegularRental());
-        System.out.println(buildNewRental());
-        System.out.println(buildChildRental());
-    }
-
-    private static Rental buildRegularRental() {
+    public static Rental buildRegularRental() {
         Movie movie = Movie.builder()
                 .title("Titanic Regular")
                 .price(Price.build(PriceCodes.REGULAR))
@@ -30,7 +17,7 @@ public class Application {
                 .build();
     }
 
-    private static Rental buildNewRental() {
+    public static Rental buildNewRental() {
         Movie movie = Movie.builder()
                 .title("Titanic New")
                 .price(Price.build(PriceCodes.NEW_RELEASE))
@@ -42,7 +29,7 @@ public class Application {
                 .build();
     }
 
-    private static Rental buildChildRental() {
+    public static Rental buildChildRental() {
         Movie movie = Movie.builder()
                 .title("Titanic Child")
                 .price(Price.build(PriceCodes.CHILDRENS))
