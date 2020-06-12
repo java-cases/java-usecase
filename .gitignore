@@ -32,3 +32,5 @@ Thumbs.db
 .springBeans
 bin/
 .vscode
+.gradle
+build

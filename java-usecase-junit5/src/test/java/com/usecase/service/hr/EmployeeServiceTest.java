@@ -1,7 +1,6 @@
 package com.usecase.service.hr;
 
-import com.demo.domain.Employee;
-import com.demo.service.hr.HRService;
+import com.usecase.domain.Employee;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
