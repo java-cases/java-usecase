@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+>
+
+    <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>java-usecase-parent</artifactId>
         <groupId>com.kenly</groupId>
+        <artifactId>java-usecase-parents</artifactId>
         <version>1.2.0</version>
+        <relativePath>../java-usecase-parents</relativePath>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>java-usecase-owasp</artifactId>
     <packaging>jar</packaging>
@@ -16,7 +18,6 @@
         <dependency>
             <groupId>org.owasp.esapi</groupId>
             <artifactId>esapi</artifactId>
-            <version>2.1.0.1</version>
         </dependency>
     </dependencies>
 

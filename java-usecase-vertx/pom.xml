@@ -2,36 +2,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>java-usecase-parent</artifactId>
         <groupId>com.kenly</groupId>
+        <artifactId>java-usecase-parents</artifactId>
         <version>1.2.0</version>
+        <relativePath>../java-usecase-parents</relativePath>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>java-usecase-vertx</artifactId>
     <packaging>jar</packaging>
-
-    <properties>
-        <vertx.version>3.5.4</vertx.version>
-    </properties>
 
     <dependencies>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-core</artifactId>
-            <version>${vertx.version}</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-web</artifactId>
-            <version>${vertx.version}</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-unit</artifactId>
-            <version>${vertx.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
