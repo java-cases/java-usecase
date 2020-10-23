@@ -1,5 +1,5 @@
 FROM anapsix/alpine-java:8u192b12_jdk
-MAINTAINER devcloud@huaweicloud.com
+MAINTAINER kenly33@126.com
 VOLUME /tmp
 ADD certs/ ${JAVA_HOME}/jre/lib/security/
 ARG APP_FILE=app.jar

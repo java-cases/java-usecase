@@ -21,6 +21,7 @@
         <module>java-usecase-security</module>
         <module>java-usecase-demo-starter</module>
         <module>java-usecase-spring-boot</module>
+        <module>java-usecase-ratelimit</module>
         <module>java-usecase-aop</module>
         <module>java-usecase-vertx</module>
         <module>java-usecase-http</module>

@@ -1,7 +1,7 @@
 package com.usecase.controller;
 
 import com.usecase.exception.RestException;
-import com.usecase.status.ServiceStatus;
+import com.usecase.status.ErrorResult;
 import com.usecase.utils.Serialization;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,10 +17,14 @@ public class RestExceptionHandler {
     @ExceptionHandler({RestException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
-    public ServiceStatus handleException(RestException e) {
-        ServiceStatus status =e.getStatus();
-        log.info("result:" + Serialization.toJson(status).orElse("error"));
-        return status;
+    public ErrorResult handleException(RestException e){
+
+        ErrorResult error =new ErrorResult("failed",
+                "PM-1-501",e.getLocalizedMessage());
+
+        log.info("result:" + Serialization.toJson(error).orElse("error"));
+        return error;
+
     }
 
 }

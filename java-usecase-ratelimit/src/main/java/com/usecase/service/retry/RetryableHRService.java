@@ -5,7 +5,6 @@ import com.usecase.exception.HRServieException;
 import com.usecase.status.ServiceStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
 import org.springframework.retry.annotation.Backoff;
 import org.springframework.retry.annotation.Recover;
 import org.springframework.retry.annotation.Retryable;
@@ -25,7 +24,8 @@ public class RetryableHRService implements RetryableService {
         if (id <= 0) {
             ServiceStatus status = ServiceStatus.builder()
                     .message("invalid id")
-                    .statusCode(HttpStatus.INTERNAL_SERVER_ERROR.value())
+                    .statusCode("500")
+                    .success(false)
                     .build();
             throw new HRServieException(status);
         }

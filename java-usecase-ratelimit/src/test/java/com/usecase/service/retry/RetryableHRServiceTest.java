@@ -1,4 +1,4 @@
-package com.usecase.service.hr;
+package com.usecase.service.retry;
 
 import com.usecase.domain.Employee;
 import com.usecase.exception.HRServieException;
@@ -14,18 +14,28 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(webEnvironment = DEFINED_PORT)
-public class EmployeeServiceTest {
+public class RetryableHRServiceTest {
 
     @Autowired
-    private HRService hrService;
+    private RetryableService retryableService;
 
     @Test
     public void findEmployee() throws HRServieException {
-        Employee employee = hrService.findEmployee(1001);
+        Employee employee = retryableService.findEmployee(1002);
 
         assertNotNull(employee);
         System.out.println(employee);
 
-        assertEquals(true, employee.getId() == 1001);
+        assertEquals(true, employee.getId() == 1002);
+    }
+
+    @Test
+    public void findEmployeeInvalidID() throws HRServieException {
+        Employee employee = retryableService.findEmployee(-1);
+
+        assertNotNull(employee);
+        System.out.println(employee);
+
+        assertEquals(true, employee.getId() == 0);
     }
 }

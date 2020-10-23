@@ -1,9 +1,9 @@
-package com.usecase.service.hr;
+package com.usecase.service.retry;
 
 
 import com.usecase.domain.Employee;
 import com.usecase.exception.HRServieException;
 
-public interface HRService {
+public interface RetryableService {
     Employee findEmployee(Integer id) throws HRServieException;
 }

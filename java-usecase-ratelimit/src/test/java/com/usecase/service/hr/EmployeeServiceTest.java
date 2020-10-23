@@ -1,7 +1,6 @@
 package com.usecase.service.hr;
 
 import com.usecase.domain.Employee;
-import com.usecase.exception.HRServieException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,7 @@ public class EmployeeServiceTest {
     private HRService hrService;
 
     @Test
-    public void findEmployee() throws HRServieException {
+    public void findEmployee() {
         Employee employee = hrService.findEmployee(1001);
 
         assertNotNull(employee);

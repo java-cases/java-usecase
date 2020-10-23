@@ -6,18 +6,18 @@ public class RestException extends Exception {
 
     private ServiceStatus status;
 
-    public RestException(final String message) {
-        super(message);
-    }
-
     public RestException(final ServiceStatus status) {
         super(status.getMessage());
         this.setStatus(status);
     }
 
     public RestException(final ServiceStatus status, final Throwable cause) {
-        super(status.getMessage(), cause);
+        super(cause);
         this.setStatus(status);
+    }
+
+    public RestException(final String message) {
+        super(message);
     }
 
     public RestException(final String message, final Throwable cause) {
@@ -26,6 +26,11 @@ public class RestException extends Exception {
 
     public RestException(final Throwable cause) {
         super(cause);
+    }
+
+    public RestException(final String message, final ServiceStatus status) {
+        super(message);
+        this.setStatus(status);
     }
 
     public ServiceStatus getStatus() {

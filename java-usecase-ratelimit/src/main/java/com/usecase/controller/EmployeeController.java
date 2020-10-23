@@ -1,6 +1,5 @@
 package com.usecase.controller;
 
-import com.usecase.annotation.RateLimit;
 import com.usecase.domain.Employee;
 import com.usecase.exception.RestException;
 import com.usecase.service.hr.HRService;
@@ -21,8 +20,11 @@ public class EmployeeController {
     private HRService hrService;
 
     @GetMapping("/{id}")
-    @RateLimit(perSecond = 1.0, timeOut = 500)
     public Employee findById(@PathVariable Long id) throws RestException {
+        if (id <= 0) {
+            throw new RestException("invalid id!");
+        }
+
         return hrService.findEmployee(id.intValue());
     }
 
