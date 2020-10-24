@@ -2,9 +2,9 @@ package com.usecase.util.map.cache;
 
 public class CacheMapConfig {
 
-    private static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
     public static final int MAX_CACHE_SIZE = 10000000;
     public static final float DEFAULT_LOAD_FACTORY = 0.75f;
+    private static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
 
     public static int calculateCapacity() {
         return calculateCapacity(0);

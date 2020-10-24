@@ -42,7 +42,7 @@ public class ImmutableSetTest {
         assertEquals(true, colors.contains("purple"));
 
         assertEquals("red", colors.asList().get(0));
-        assertEquals("purple", colors.asList().get(colors.size()-1));
+        assertEquals("purple", colors.asList().get(colors.size() - 1));
     }
 
     @Test
@@ -50,7 +50,7 @@ public class ImmutableSetTest {
         ImmutableSet<String> colors = ImmutableSet.copyOf(COLOR_NAMES);
         assertEquals(6, colors.size());
         assertEquals("red", colors.asList().get(0));
-        assertEquals("purple", colors.asList().get(colors.size()-1));
+        assertEquals("purple", colors.asList().get(colors.size() - 1));
     }
 
     @Test
@@ -61,20 +61,20 @@ public class ImmutableSetTest {
         ImmutableSet<String> colors = ImmutableSet.copyOf(readonlyList);
         assertEquals(6, colors.size());
         assertEquals("red", colors.asList().get(0));
-        assertEquals("purple", colors.asList().get(colors.size()-1));
+        assertEquals("purple", colors.asList().get(colors.size() - 1));
     }
 
     @Test
     public void copyOfList() {
         List<String> readonlyList = Arrays.asList("red", "orange", "yellow",
                 "green", "blue", "purple");
-        List<String> immutableList =new ArrayList<>();
+        List<String> immutableList = new ArrayList<>();
         immutableList.addAll(readonlyList);
 
         ImmutableSet<String> colors = ImmutableSet.copyOf(immutableList);
         assertEquals(6, colors.size());
         assertEquals("red", colors.asList().get(0));
-        assertEquals("purple", colors.asList().get(colors.size()-1));
+        assertEquals("purple", colors.asList().get(colors.size() - 1));
 
         immutableList.clear();
         assertEquals(0, immutableList.size());
@@ -92,6 +92,6 @@ public class ImmutableSetTest {
         ImmutableList<String> colors = ImmutableSet.copyOf(COLOR_NAMES).asList();
         assertEquals(6, colors.size());
         assertEquals("red", colors.get(0));
-        assertEquals("purple", colors.get(colors.size()-1));
+        assertEquals("purple", colors.get(colors.size() - 1));
     }
 }

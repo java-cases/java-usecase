@@ -12,12 +12,12 @@ public class WeakReferenceTest {
 
     @Test
     public void strongReference() {
-        Object obj =new Object();
+        Object obj = new Object();
         Object referenceObj = obj;
 
         Assert.assertEquals(obj, referenceObj);
 
-        obj =null;
+        obj = null;
         System.gc();
 
         Assert.assertNotNull(referenceObj);
@@ -25,12 +25,12 @@ public class WeakReferenceTest {
 
     @Test
     public void weakReference() {
-        Object obj =new Object();
-        WeakReference referenceObj =new WeakReference<>(obj);
+        Object obj = new Object();
+        WeakReference referenceObj = new WeakReference<>(obj);
 
         Assert.assertEquals(obj, referenceObj.get());
 
-        obj =null;
+        obj = null;
         System.gc();
 
         Assert.assertNull(referenceObj.get());
@@ -38,12 +38,12 @@ public class WeakReferenceTest {
 
     @Test
     public void softReference() {
-        Object obj =new Object();
-        SoftReference referenceObj =new SoftReference<>(obj);
+        Object obj = new Object();
+        SoftReference referenceObj = new SoftReference<>(obj);
 
         Assert.assertEquals(obj, referenceObj.get());
 
-        obj =null;
+        obj = null;
         System.gc();
 
         Assert.assertNotNull(referenceObj.get());
@@ -51,14 +51,14 @@ public class WeakReferenceTest {
 
     @Test
     public void weakHashMap() throws InterruptedException {
-        Map weakHashMap =new WeakHashMap<>();
-        Object key =new Object();
-        Object value =new Object();
+        Map weakHashMap = new WeakHashMap<>();
+        Object key = new Object();
+        Object value = new Object();
         weakHashMap.put(key, value);
 
         Assert.assertTrue(weakHashMap.containsValue(value));
 
-        key =null;
+        key = null;
         System.gc();
         Thread.sleep(1000);
 

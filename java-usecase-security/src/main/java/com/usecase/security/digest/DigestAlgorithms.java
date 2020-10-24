@@ -14,14 +14,14 @@ public enum DigestAlgorithms {
     SHA3_384("SHA3-384"),
     SHA3_512("SHA3-512");
 
-    public String getValue() {
-        return value;
-    }
-
     private final String value;
 
     DigestAlgorithms(String value) {
         this.value = value;
+    }
+
+    public String getValue() {
+        return value;
     }
 
 }

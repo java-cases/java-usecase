@@ -1,4 +1,3 @@
-
 package com.usecase.http.exceptions;
 
 import com.usecase.http.StatusCode;

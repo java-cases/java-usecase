@@ -7,5 +7,6 @@ import java.lang.annotation.*;
 @Documented
 public @interface Entity {
     String name() default "";
+
     String key() default "";
 }

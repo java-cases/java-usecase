@@ -13,11 +13,11 @@ public class MessageDigestAlgorithms {
     public static final String SHA3_384 = "SHA3-384";
     public static final String SHA3_512 = "SHA3-512";
 
-    public static String[] values() {
-        return new String[]{"MD2", "MD5", "SHA-1", "SHA-224", "SHA-256", "SHA-384", "SHA-512", "SHA3-224", "SHA3-256", "SHA3-384", "SHA3-512"};
+    private MessageDigestAlgorithms() {
     }
 
-    private MessageDigestAlgorithms() {
+    public static String[] values() {
+        return new String[]{"MD2", "MD5", "SHA-1", "SHA-224", "SHA-256", "SHA-384", "SHA-512", "SHA3-224", "SHA3-256", "SHA3-384", "SHA3-512"};
     }
 }
 

@@ -4,18 +4,12 @@ import org.apache.commons.lang3.StringUtils;
 
 public class StringUtilsDelegate {
 
-    private static final int STRING_BUILDER_SIZE = 256;
-
     public static final String SPACE = " ";
-
     public static final String EMPTY = "";
-
     public static final String LF = "\n";
-
     public static final String CR = "\r";
-
     public static final int INDEX_NOT_FOUND = -1;
-
+    private static final int STRING_BUILDER_SIZE = 256;
     /**
      * <p>The maximum size to which the padding constant(s) can expand.</p>
      */

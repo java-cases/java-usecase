@@ -43,8 +43,8 @@ public class Integerx {
         return Integer.valueOf(i);
     }
 
-    public static Integer valueOf(String s, int radix){
-        return Integer.valueOf(parseInt(s,radix));
+    public static Integer valueOf(String s, int radix) {
+        return Integer.valueOf(parseInt(s, radix));
     }
 
     public static Integer valueOf(String s) throws NumberFormatException {

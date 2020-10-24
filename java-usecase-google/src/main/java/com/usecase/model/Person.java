@@ -10,6 +10,14 @@ public class Person implements Comparable<Person> {
     private String firstName;
     private int zipCode;
 
+    public Person(String lastName, String firstName) {
+
+        checkPreconditions(lastName, firstName);
+
+        this.lastName = lastName;
+        this.firstName = firstName;
+    }
+
     public String getLastName() {
         return lastName;
     }
@@ -22,21 +30,12 @@ public class Person implements Comparable<Person> {
         return zipCode;
     }
 
-
-    public Person(String lastName, String firstName) {
-
-        checkPreconditions(lastName, firstName);
-
-        this.lastName = lastName;
-        this.firstName = firstName;
-    }
-
     private void checkPreconditions(String lastName, String firstName) {
 
-        Preconditions.checkArgument(lastName!=null,
+        Preconditions.checkArgument(lastName != null,
                 "lastName was null but expected not null");
 
-        Preconditions.checkArgument(firstName!=null,
+        Preconditions.checkArgument(firstName != null,
                 "firstName was null but expected not null");
     }
 

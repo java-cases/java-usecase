@@ -1,4 +1,3 @@
-
 package com.usecase.http;
 
 public enum StatusCode {
@@ -59,10 +58,6 @@ public enum StatusCode {
         this.code = code;
     }
 
-    public int getCode() {
-        return code;
-    }
-
     public static StatusCode from(int code) {
         for (StatusCode codes : StatusCode.values()) {
             if (codes.getCode() == code) {
@@ -71,6 +66,10 @@ public enum StatusCode {
         }
 
         return UNKNOWN_CODE;
+    }
+
+    public int getCode() {
+        return code;
     }
 
     @Override

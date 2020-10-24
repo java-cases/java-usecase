@@ -22,7 +22,7 @@ public class MockServiceImpl {
         return file.exists();
     }
 
-    public void remove(){
+    public void remove() {
 
     }
 

@@ -78,7 +78,7 @@ public interface SecureValidator {
                                ValidatorOptions options) throws IntrusionException;
 
     boolean isValidListItem(String context, String input, List<String> list)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           throws IntrusionException;
+            throws IntrusionException;
 
     boolean isValidListItem(String input, List<String> list,
                             ValidatorOptions options) throws IntrusionException;
@@ -115,5 +115,5 @@ public interface SecureValidator {
                                     ValidatorOptions options) throws IntrusionException;
 
     String safeReadLine(InputStream inputStream, int maxLength)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            throws ValidationException;
+            throws ValidationException;
 }

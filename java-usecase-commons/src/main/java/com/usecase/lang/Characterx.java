@@ -13,19 +13,6 @@ public class Characterx {
         return new Character(c);
     }
 
-    private static class CharacterCache {
-        private CharacterCache() {
-        }
-
-        static final Character[] cache = new Character[127 + 1];
-
-        static {
-            for (int i = 0; i < cache.length; i++) {
-                cache[i] = new Character((char) i);
-            }
-        }
-    }
-
     public static int hashCode(char value) {
         return (int) value;
     }
@@ -68,7 +55,7 @@ public class Characterx {
 
     //字符是否在unicode范围
     public static boolean isDefined(char ch) {
-        return isDefined((int)ch);
+        return isDefined((int) ch);
     }
 
     public static boolean isDefined(int codePoint) {
@@ -171,5 +158,18 @@ public class Characterx {
 
     public static String getName(int codePoint) {
         return Character.getName(codePoint);
+    }
+
+    private static class CharacterCache {
+        static final Character[] cache = new Character[127 + 1];
+
+        static {
+            for (int i = 0; i < cache.length; i++) {
+                cache[i] = new Character((char) i);
+            }
+        }
+
+        private CharacterCache() {
+        }
     }
 }

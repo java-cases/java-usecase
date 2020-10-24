@@ -67,7 +67,7 @@ public class MokitoStubTest {
     @Test
     public void doNothing() {
 
-        MockServiceImpl serviceImpl=Mockito.mock(MockServiceImpl.class);
+        MockServiceImpl serviceImpl = Mockito.mock(MockServiceImpl.class);
 
         //模拟测试无返回值的方法
         Mockito.doNothing().when(serviceImpl).remove();

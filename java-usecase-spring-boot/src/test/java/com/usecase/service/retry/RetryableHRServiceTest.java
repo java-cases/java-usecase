@@ -21,12 +21,12 @@ public class RetryableHRServiceTest {
 
     @Test
     public void findEmployee() throws HRServieException {
-        Employee employee = retryableService.findEmployee(1002);
+        Employee employee = retryableService.findEmployee(10000);
 
         assertNotNull(employee);
         System.out.println(employee);
 
-        assertEquals(true, employee.getId() == 1002);
+        assertEquals(true, employee.getId() == 10000);
     }
 
     @Test

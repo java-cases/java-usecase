@@ -102,7 +102,7 @@ public class EnumSetTest {
         enumSet.add(Season.SUMMER);
         enumSet.add(Season.AUTUMN);
 
-        EnumSet<Season> otherEnumSet =EnumSet.complementOf(enumSet);
+        EnumSet<Season> otherEnumSet = EnumSet.complementOf(enumSet);
 
         assertEquals(1, otherEnumSet.size());
         assertEquals(true, otherEnumSet.contains(Season.WINTER));

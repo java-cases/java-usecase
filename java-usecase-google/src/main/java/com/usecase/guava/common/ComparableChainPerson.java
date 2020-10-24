@@ -12,9 +12,9 @@ public class ComparableChainPerson extends Person {
     @Override
     public int compareTo(Person other) {
         return ComparisonChain.start()
-                .compare(super.getLastName(),other.getLastName())
-                .compare(super.getFirstName(),other.getFirstName())
-                .compare(super.getZipCode(),other.getZipCode())
+                .compare(super.getLastName(), other.getLastName())
+                .compare(super.getFirstName(), other.getFirstName())
+                .compare(super.getZipCode(), other.getZipCode())
                 .result();
     }
 }

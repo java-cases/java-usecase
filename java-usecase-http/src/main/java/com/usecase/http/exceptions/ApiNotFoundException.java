@@ -1,4 +1,3 @@
-
 package com.usecase.http.exceptions;
 
 public class ApiNotFoundException extends Exception {

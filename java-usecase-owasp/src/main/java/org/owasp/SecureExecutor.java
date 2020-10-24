@@ -11,7 +11,7 @@ public interface SecureExecutor {
 
     Optional<ExecuteResult> executeSystemCommand(File executable, List params);
 
-    Optional<ExecuteResult>  executeSystemCommand(File executable, List params,
-                                       File workdir, Codec codec,
-                                       boolean logParams, boolean redirectErrorStream);
+    Optional<ExecuteResult> executeSystemCommand(File executable, List params,
+                                                 File workdir, Codec codec,
+                                                 boolean logParams, boolean redirectErrorStream);
 }

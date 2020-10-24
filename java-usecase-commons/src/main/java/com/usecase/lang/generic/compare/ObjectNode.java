@@ -6,18 +6,18 @@ public class ObjectNode implements Comparable {
     private Comparable data;
     private ObjectNode next;
 
+    public ObjectNode(Comparable data, ObjectNode next) {
+        Objects.requireNonNull(data);
+        this.data = data;
+        this.next = next;
+    }
+
     public Object getData() {
         return data;
     }
 
     public ObjectNode getNext() {
         return next;
-    }
-
-    public ObjectNode(Comparable data, ObjectNode next) {
-        Objects.requireNonNull(data);
-        this.data = data;
-        this.next = next;
     }
 
     public int compareToNext() {

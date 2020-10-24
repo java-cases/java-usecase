@@ -12,14 +12,14 @@ public class WeakHashMapTest {
 
     @Test
     public void weakHashMap() throws InterruptedException {
-        Map weakHashMap =new WeakHashMap<>();
-        Object key =new Object();
-        Object value =new Object();
+        Map weakHashMap = new WeakHashMap<>();
+        Object key = new Object();
+        Object value = new Object();
         weakHashMap.put(key, value);
 
         assertTrue(weakHashMap.containsValue(value));
 
-        key =null;
+        key = null;
         System.gc();
         Thread.sleep(1000);
 

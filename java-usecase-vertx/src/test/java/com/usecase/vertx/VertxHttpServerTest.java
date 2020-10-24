@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
 public class VertxHttpServerTest {
 
     private Vertx vertx;
-    private int port=8080;
+    private int port = 8080;
 
     @Before
     public void setUp(TestContext context) {

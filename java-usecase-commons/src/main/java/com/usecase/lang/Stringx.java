@@ -38,7 +38,7 @@ public class Stringx {
     }
 
     public static String newString(byte[] bytes) {
-        return new String(bytes,Charset.forName("UTF-8"));
+        return new String(bytes, Charset.forName("UTF-8"));
     }
 
     public static String newString(StringBuffer buffer) {

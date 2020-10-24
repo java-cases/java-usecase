@@ -17,6 +17,16 @@ public class Employee {
     //@ApiModelProperty(value="员工年龄")
     private Integer age;
 
+    public Employee() {
+
+    }
+
+    public Employee(Integer id, String name, Integer age) {
+        this.setId(id);
+        this.setName(name);
+        this.setAge(age);
+    }
+
     public Integer getId() {
         return this.id;
     }
@@ -39,16 +49,6 @@ public class Employee {
 
     public void setAge(Integer age) {
         this.age = age;
-    }
-
-    public Employee() {
-
-    }
-
-    public Employee(Integer id, String name, Integer age) {
-        this.setId(id);
-        this.setName(name);
-        this.setAge(age);
     }
 
     @Override

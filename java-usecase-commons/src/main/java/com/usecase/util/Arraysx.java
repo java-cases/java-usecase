@@ -30,7 +30,7 @@ public class Arraysx {
         return binarySearch0(a, fromIndex, toIndex, key);
     }
 
-    private static int binarySearch0(int[] a, int fromIndex, int toIndex,int key) {
+    private static int binarySearch0(int[] a, int fromIndex, int toIndex, int key) {
         int low = fromIndex;
         int high = toIndex - 1;
 
@@ -67,17 +67,15 @@ public class Arraysx {
         while (low <= high) {
             int mid = (low + high) >>> 1;
             @SuppressWarnings("rawtypes")
-            Comparable midVal = (Comparable)a[mid];
+            Comparable midVal = (Comparable) a[mid];
             @SuppressWarnings("unchecked")
             int cmp = midVal.compareTo(key);
 
             if (cmp < 0) {
                 low = mid + 1;
-            }
-            else if (cmp > 0) {
+            } else if (cmp > 0) {
                 high = mid - 1;
-            }
-            else {
+            } else {
                 return mid; // key found
             }
         }
@@ -111,11 +109,9 @@ public class Arraysx {
 
             if (cmp < 0) {
                 low = mid + 1;
-            }
-            else if (cmp > 0) {
+            } else if (cmp > 0) {
                 high = mid - 1;
-            }
-            else {
+            } else {
                 return mid; // key found
             }
         }

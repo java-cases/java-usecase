@@ -1,15 +1,17 @@
 package com.usecase.service.hr;
 
 import com.usecase.domain.Employee;
-import com.usecase.exception.HRServieException;
+import com.usecase.exception.RestException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.DEFINED_PORT;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -20,12 +22,24 @@ public class EmployeeServiceTest {
     private HRService hrService;
 
     @Test
-    public void findEmployee() throws HRServieException {
+    public void findEmployee() throws RestException {
         Employee employee = hrService.findEmployee(1001);
 
         assertNotNull(employee);
         System.out.println(employee);
 
         assertEquals(true, employee.getId() == 1001);
+    }
+
+    @Test
+    public void findEmployeeWithInvalidId() {
+        RestException e = assertThrows(RestException.class, () -> {
+            hrService.findEmployee(0);
+        });
+
+        assertNotNull(e);
+        System.out.println(e.getStatus());
+
+        assertEquals(HttpStatus.BAD_REQUEST, e.getStatus().getStatusCode());
     }
 }

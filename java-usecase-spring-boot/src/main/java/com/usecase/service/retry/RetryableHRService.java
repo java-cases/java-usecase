@@ -2,7 +2,7 @@ package com.usecase.service.retry;
 
 import com.usecase.domain.Employee;
 import com.usecase.exception.HRServieException;
-import com.usecase.status.ServiceStatus;
+import com.usecase.status.RestStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -23,9 +23,9 @@ public class RetryableHRService implements RetryableService {
         log.info("to execute findEmployee.");
 
         if (id <= 0) {
-            ServiceStatus status = ServiceStatus.builder()
+            RestStatus status = RestStatus.builder()
                     .message("invalid id")
-                    .statusCode(HttpStatus.INTERNAL_SERVER_ERROR.value())
+                    .statusCode(HttpStatus.INTERNAL_SERVER_ERROR)
                     .build();
             throw new HRServieException(status);
         }

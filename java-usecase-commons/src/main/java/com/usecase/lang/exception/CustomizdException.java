@@ -4,14 +4,6 @@ public class CustomizdException extends Exception {
 
     private ExceptionType exceptionType;
 
-    public ExceptionType getExceptionType() {
-        return exceptionType;
-    }
-
-    public void setExceptionType(ExceptionType exceptionType) {
-        this.exceptionType = exceptionType;
-    }
-
     public CustomizdException() {
         super();
     }
@@ -32,6 +24,14 @@ public class CustomizdException extends Exception {
     public CustomizdException(String message, Throwable cause, ExceptionType exceptionType) {
         super(message, cause);
         this.setExceptionType(exceptionType);
+    }
+
+    public ExceptionType getExceptionType() {
+        return exceptionType;
+    }
+
+    public void setExceptionType(ExceptionType exceptionType) {
+        this.exceptionType = exceptionType;
     }
 
     @Override

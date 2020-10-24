@@ -11,14 +11,6 @@ public enum Season {
     private final String label;
     private final int value;
 
-    public String getLabel() {
-        return label;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
     Season(String label, int value) {
         this.label = label;
         this.value = value;
@@ -36,6 +28,14 @@ public enum Season {
                 .filter(x -> x.label == label)
                 .findFirst()
                 .orElse(Season.SPRING);
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public int getValue() {
+        return value;
     }
 
     @Override

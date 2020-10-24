@@ -9,6 +9,18 @@ public class ValidatorOptions {
     private final boolean canonicalize;
     private final ValidationErrorList errorList;
 
+    public ValidatorOptions(String context, int maxLength, boolean allowNull, boolean canonicalize, ValidationErrorList errorList) {
+        this.context = context;
+        this.maxLength = maxLength;
+        this.allowNull = allowNull;
+        this.canonicalize = canonicalize;
+        this.errorList = errorList;
+    }
+
+    public static ValidatorOptionsBuilder builder() {
+        return new ValidatorOptionsBuilder();
+    }
+
     public String getContext() {
         return context;
     }
@@ -27,17 +39,5 @@ public class ValidatorOptions {
 
     public ValidationErrorList getErrorList() {
         return errorList;
-    }
-
-    public ValidatorOptions(String context, int maxLength, boolean allowNull, boolean canonicalize, ValidationErrorList errorList) {
-        this.context = context;
-        this.maxLength = maxLength;
-        this.allowNull = allowNull;
-        this.canonicalize = canonicalize;
-        this.errorList = errorList;
-    }
-
-    public static ValidatorOptionsBuilder builder() {
-        return new ValidatorOptionsBuilder();
     }
 }

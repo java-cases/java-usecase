@@ -18,7 +18,6 @@ public class EncoderProxyTest {
     }
 
 
-
     @Test
     public void canonicalize() {
         encoder.canonicalize("");
@@ -45,7 +44,6 @@ public class EncoderProxyTest {
     }
 
 
-
     @Test
     public void encodeForHTMLAttribute() {
     }
@@ -63,7 +61,7 @@ public class EncoderProxyTest {
     }
 
     @Test
-    public void encodeForURL()  {
+    public void encodeForURL() {
         Optional<String> r = encoder.encodeForURL(this.getUrl());
 
         assertTrue(r.isPresent());
@@ -72,7 +70,7 @@ public class EncoderProxyTest {
 
     @Test
     public void decodeFromURL() {
-        Optional<String> r = encoder.decodeFromURL( encoder.encodeForURL(this.getUrl()).orElse(""));
+        Optional<String> r = encoder.decodeFromURL(encoder.encodeForURL(this.getUrl()).orElse(""));
 
         assertTrue(r.isPresent());
         System.out.println(r.get());

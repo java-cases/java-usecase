@@ -173,7 +173,7 @@ public class BinaryTreeMapTest {
     @Test
     public void subMap() {
         TreeMap<String, String> map = buildMap();
-        SortedMap<String, String> submap=map.subMap("1001","1003");
+        SortedMap<String, String> submap = map.subMap("1001", "1003");
 
         assertEquals(2, submap.size());
         assertEquals("1001", submap.firstKey());
@@ -183,7 +183,7 @@ public class BinaryTreeMapTest {
     @Test
     public void headMap() {
         TreeMap<String, String> map = buildMap();
-        SortedMap<String, String> submap=map.headMap("1003");
+        SortedMap<String, String> submap = map.headMap("1003");
 
         assertEquals(2, submap.size());
         assertEquals("1001", submap.firstKey());
@@ -193,7 +193,7 @@ public class BinaryTreeMapTest {
     @Test
     public void tailMap() {
         TreeMap<String, String> map = buildMap();
-        SortedMap<String, String> submap=map.tailMap("1002");
+        SortedMap<String, String> submap = map.tailMap("1002");
 
         assertEquals(2, submap.size());
         assertEquals("1002", submap.firstKey());

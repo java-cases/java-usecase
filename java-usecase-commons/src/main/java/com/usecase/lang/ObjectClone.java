@@ -9,6 +9,12 @@ public class ObjectClone implements Cloneable {
     private int y;
     private int[] items;
 
+    public ObjectClone(int x, int y) {
+        this.x = x;
+        this.y = y;
+        this.items = new int[]{x, y, x + y};
+    }
+
     //演示用，不要暴露内部引用类型数据
     public int[] getItems() {
         return items;
@@ -16,13 +22,6 @@ public class ObjectClone implements Cloneable {
 
     public int[] copyItems() {
         return Arrays.copyOf(items, items.length);
-    }
-
-
-    public ObjectClone(int x, int y) {
-        this.x = x;
-        this.y = y;
-        this.items = new int[]{x, y, x + y};
     }
 
     @Override

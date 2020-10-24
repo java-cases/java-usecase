@@ -6,15 +6,15 @@ public class Employee implements Comparable<Employee> {
 
     private int number;
 
+    public Employee(int number) {
+        this.number = number;
+    }
+
     public int getNumber() {
         return number;
     }
 
     public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public Employee(int number) {
         this.number = number;
     }
 

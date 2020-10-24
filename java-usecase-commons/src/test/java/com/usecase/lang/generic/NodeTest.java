@@ -11,7 +11,7 @@ public class NodeTest {
         Node<Integer> next = new Node(20, null);
         Node<Integer> node = new Node(10, next);
 
-        Assert.assertEquals(true, node.getData()==10);
+        Assert.assertEquals(true, node.getData() == 10);
 
         Assert.assertEquals(next, node.getNext());
     }
@@ -22,7 +22,7 @@ public class NodeTest {
         Node<Integer> next = new IntegerNode(20, null);
         Node<Integer> node = new IntegerNode(10, next);
 
-        Assert.assertEquals(true, node.getData()==10);
+        Assert.assertEquals(true, node.getData() == 10);
 
         Assert.assertEquals(next, node.getNext());
     }

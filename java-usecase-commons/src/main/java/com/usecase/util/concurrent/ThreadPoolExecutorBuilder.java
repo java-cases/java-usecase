@@ -17,6 +17,29 @@ public class ThreadPoolExecutorBuilder {
     private ThreadFactory threadFactory;
     private RejectedExecutionHandler handler;
 
+    private ThreadPoolExecutorBuilder() {
+
+    }
+
+    public static ThreadPoolExecutorBuilder builder() {
+        return new ThreadPoolExecutorBuilder();
+    }
+
+    public static ThreadPoolExecutorBuilder defaultBuilder() {
+        return new ThreadPoolExecutorBuilder()
+                .corePoolSize(DEFAULT_CORE_POOL_SIZE)
+                .maximumPoolSize(DEFAULT_MAXIMUM_POOL_SIZE)
+                .keepAliveTime(0)
+                .unit(NANOSECONDS)
+                .threadFactory(Executors.defaultThreadFactory())
+                .handler(new ThreadPoolExecutor.AbortPolicy())
+                .workQueue(new ArrayBlockingQueue(DEFAULT_MAXIMUM_POOL_SIZE));
+    }
+
+    public static ThreadPoolExecutor defaultInstance() {
+        return defaultBuilder().build();
+    }
+
     public ThreadPoolExecutorBuilder corePoolSize(int corePoolSize) {
         this.corePoolSize = corePoolSize;
         return this;
@@ -50,29 +73,6 @@ public class ThreadPoolExecutorBuilder {
     public ThreadPoolExecutorBuilder handler(RejectedExecutionHandler handler) {
         this.handler = handler;
         return this;
-    }
-
-    private ThreadPoolExecutorBuilder() {
-
-    }
-
-    public static ThreadPoolExecutorBuilder builder() {
-        return new ThreadPoolExecutorBuilder();
-    }
-
-    public static ThreadPoolExecutorBuilder defaultBuilder() {
-        return new ThreadPoolExecutorBuilder()
-                .corePoolSize(DEFAULT_CORE_POOL_SIZE)
-                .maximumPoolSize(DEFAULT_MAXIMUM_POOL_SIZE)
-                .keepAliveTime(0)
-                .unit(NANOSECONDS)
-                .threadFactory(Executors.defaultThreadFactory())
-                .handler(new ThreadPoolExecutor.AbortPolicy())
-                .workQueue(new ArrayBlockingQueue(DEFAULT_MAXIMUM_POOL_SIZE));
-    }
-
-    public static ThreadPoolExecutor defaultInstance() {
-        return defaultBuilder().build();
     }
 
     public ThreadPoolExecutor build() {

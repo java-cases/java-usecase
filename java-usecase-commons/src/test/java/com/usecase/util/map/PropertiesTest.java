@@ -21,7 +21,7 @@ public class PropertiesTest {
     @Test
     public void setProperty() {
         Properties props = buildProperties();
-        Object r=props.setProperty("1004", "C++");
+        Object r = props.setProperty("1004", "C++");
 
         assertEquals(null, r);
         assertEquals(4, props.size());
@@ -40,7 +40,7 @@ public class PropertiesTest {
     @Test
     public void getProperty() {
         Properties props = buildProperties();
-        String r=props.getProperty("1003");
+        String r = props.getProperty("1003");
 
         assertEquals("C", r);
     }
@@ -48,7 +48,7 @@ public class PropertiesTest {
     @Test
     public void getNullProperty() {
         Properties props = buildProperties();
-        String r=props.getProperty("1004");
+        String r = props.getProperty("1004");
 
         assertNull(r);
     }

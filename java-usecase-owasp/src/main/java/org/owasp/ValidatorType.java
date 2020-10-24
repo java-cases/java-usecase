@@ -11,12 +11,12 @@ public enum ValidatorType {
 
     private final String name;
 
-    public String getName() {
-        return name;
+    ValidatorType(String name) {
+        this.name = name;
     }
 
-    ValidatorType(String name){
-        this.name=name;
+    public String getName() {
+        return name;
     }
 
     @Override

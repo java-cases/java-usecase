@@ -15,7 +15,7 @@ public class CodecDigest {
     public static Optional<String> digest(DigestAlgorithms algorithms, String plainText) {
         Objects.requireNonNull(plainText);
 
-        MessageDigest messageDigest =DigestUtils.getDigest(algorithms.getValue());
+        MessageDigest messageDigest = DigestUtils.getDigest(algorithms.getValue());
         byte[] ciphertext = messageDigest.digest(plainText.getBytes());
 
         return Optional.ofNullable(Hex.encodeHexString(ciphertext));

@@ -48,7 +48,7 @@ public class RandomizerProxyTest {
 
     @Test
     public void getRandomReal() {
-        float r = randomizer.getRandomReal(1f,100f);
+        float r = randomizer.getRandomReal(1f, 100f);
 
         System.out.println(r);
     }

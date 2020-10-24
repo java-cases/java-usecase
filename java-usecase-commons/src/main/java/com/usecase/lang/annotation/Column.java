@@ -7,7 +7,10 @@ import java.lang.annotation.*;
 @Documented
 public @interface Column {
     String name() default "";
+
     ColumnType type() default ColumnType.VARCHAR;
+
     boolean nullable() default true;
+
     boolean autoIncrement() default false;
 }

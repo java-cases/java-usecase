@@ -4,13 +4,10 @@ import java.math.BigInteger;
 
 public class BigIntegerx {
 
-    private BigInteger big;
-
     public static final BigInteger ZERO = valueOf(0);
-
     public static final BigInteger ONE = valueOf(1);
-
     public static final BigInteger TEN = valueOf(10);
+    private BigInteger big;
 
     public BigIntegerx(BigInteger big) {
         this.big = big;

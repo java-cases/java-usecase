@@ -22,6 +22,6 @@ public class ComparisonChainTest {
         Person persion2 = new ComparableChainPerson("lastName", "fisrtName");
 
         int r = persion1.compareTo(persion2);
-        assertEquals(0, r );
+        assertEquals(0, r);
     }
 }

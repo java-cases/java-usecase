@@ -11,6 +11,10 @@ import java.util.stream.Stream;
 
 public class ParameterizedTestDemo {
 
+    static Stream<String> stringGenerator() {
+        return Stream.of("hello", "world");
+    }
+
     @ParameterizedTest
     @ValueSource(ints = {2, 4, 8})
     void intValueSource(int item) {
@@ -63,11 +67,6 @@ public class ParameterizedTestDemo {
     void methodSource(String arg) {
         Assertions.assertNotNull(arg);
     }
-
-    static Stream<String> stringGenerator() {
-        return Stream.of("hello", "world");
-    }
-
 
     @ParameterizedTest
     @ArgumentsSource(CustomArgumentsGenerator.class)

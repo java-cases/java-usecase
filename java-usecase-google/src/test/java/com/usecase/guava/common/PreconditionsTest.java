@@ -39,7 +39,7 @@ public class PreconditionsTest {
 
     @Test(expected = NullPointerException.class)
     public void checkNotNullException() {
-        String lastName =null;
+        String lastName = null;
 
         //检查 value 是否为 null，该方法直接返回 value
         lastName = Preconditions.checkNotNull(lastName);
@@ -68,36 +68,36 @@ public class PreconditionsTest {
         List<String> list = Arrays.asList("a", "b");
 
         //检查 index 作为索引值对某个列表、字符串或数组是否有效。
-        Preconditions.checkElementIndex(0,list.size());
-        Preconditions.checkElementIndex(1,list.size());
+        Preconditions.checkElementIndex(0, list.size());
+        Preconditions.checkElementIndex(1, list.size());
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
     public void checkElementIndexException() {
-        List<String> list = Arrays.asList("a","b");
+        List<String> list = Arrays.asList("a", "b");
 
         //检查 index 作为索引值对某个列表、字符串或数组是否有效。
-        Preconditions.checkElementIndex(-1,list.size());
-        Preconditions.checkElementIndex(2,list.size());
+        Preconditions.checkElementIndex(-1, list.size());
+        Preconditions.checkElementIndex(2, list.size());
     }
 
     @Test
     public void checkPositionIndex() {
-        List<String> list = Arrays.asList("a","b");
+        List<String> list = Arrays.asList("a", "b");
 
         //检查 index 作为索引值对某个列表、字符串或数组是否有效。
-        Preconditions.checkPositionIndex(0,list.size());
-        Preconditions.checkPositionIndex(1,list.size());
+        Preconditions.checkPositionIndex(0, list.size());
+        Preconditions.checkPositionIndex(1, list.size());
 
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
     public void checkPositionIndexException() {
-        List<String> list = Arrays.asList("a","b");
+        List<String> list = Arrays.asList("a", "b");
 
         //检查 index 作为索引值对某个列表、字符串或数组是否有效。
-        Preconditions.checkPositionIndex(-1,list.size());
-        Preconditions.checkPositionIndex(2,list.size());
+        Preconditions.checkPositionIndex(-1, list.size());
+        Preconditions.checkPositionIndex(2, list.size());
 
     }
 

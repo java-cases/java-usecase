@@ -82,6 +82,22 @@ public class ExecutorsCore {
         return new DefaultThreadFactory();
     }
 
+    public static ThreadFactory privilegedThreadFactory() {
+        return new PrivilegedThreadFactory();
+    }
+
+    public static <T> Callable<T> callable(Runnable task, T result) {
+        if (task == null)
+            throw new NullPointerException();
+        return new RunnableAdapter<T>(task, result);
+    }
+
+    public static Callable<Object> callable(Runnable task) {
+        if (task == null)
+            throw new NullPointerException();
+        return new RunnableAdapter<Object>(task, null);
+    }
+
     static class DefaultThreadFactory implements ThreadFactory {
         private static final AtomicInteger poolNumber = new AtomicInteger(1);
         private final ThreadGroup group;
@@ -103,10 +119,6 @@ public class ExecutorsCore {
                 t.setPriority(Thread.NORM_PRIORITY);
             return t;
         }
-    }
-
-    public static ThreadFactory privilegedThreadFactory() {
-        return new PrivilegedThreadFactory();
     }
 
     static class PrivilegedThreadFactory extends DefaultThreadFactory {
@@ -144,12 +156,6 @@ public class ExecutorsCore {
         }
     }
 
-    public static <T> Callable<T> callable(Runnable task, T result) {
-        if (task == null)
-            throw new NullPointerException();
-        return new RunnableAdapter<T>(task, result);
-    }
-
     static final class RunnableAdapter<T> implements Callable<T> {
         final Runnable task;
         final T result;
@@ -163,11 +169,5 @@ public class ExecutorsCore {
             task.run();
             return result;
         }
-    }
-
-    public static Callable<Object> callable(Runnable task) {
-        if (task == null)
-            throw new NullPointerException();
-        return new RunnableAdapter<Object>(task, null);
     }
 }

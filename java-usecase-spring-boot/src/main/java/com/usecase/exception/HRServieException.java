@@ -1,10 +1,10 @@
 package com.usecase.exception;
 
-import com.usecase.status.ServiceStatus;
+import com.usecase.status.RestStatus;
 
 public class HRServieException extends RestException {
 
-    public HRServieException(ServiceStatus status) {
+    public HRServieException(RestStatus status) {
         super(status);
     }
 }
