@@ -1,21 +1,18 @@
 package com.usecase.department;
 
-import com.usecase.annotation.TraceLogMethod;
 import com.usecase.domain.Employee;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DepartmentService implements OrgService {
+public class EmployeeService implements EmpService {
 
     @Override
-    @TraceLogMethod
-    public Employee getEmployee(Integer id) {
+    public Employee findById(Integer id) {
         return new Employee(id, "Employee-" + id, 20);
     }
 
     @Override
-    @TraceLogMethod
-    public boolean deleteEmployee(Integer id) {
+    public boolean deleteById(Integer id) {
         return false;
     }
 }

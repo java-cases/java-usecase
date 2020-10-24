@@ -1,27 +1,25 @@
-package com.usecase.service.retry;
+package com.usecase.department;
 
 import com.usecase.domain.Employee;
-import com.usecase.exception.HRServieException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.DEFINED_PORT;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(webEnvironment = DEFINED_PORT)
-public class RetryableHRServiceTest {
+public class EmployeeServiceTest {
 
     @Autowired
-    private RetryableService retryableService;
+    private EmpService service;
 
     @Test
-    public void findEmployee() throws HRServieException {
-        Employee employee = retryableService.findEmployee(1002);
+    public void findById() {
+        Employee employee = service.findById(1002);
 
         assertNotNull(employee);
         System.out.println(employee);
@@ -30,12 +28,9 @@ public class RetryableHRServiceTest {
     }
 
     @Test
-    public void findEmployeeInvalidID() throws HRServieException {
-        Employee employee = retryableService.findEmployee(-1);
+    public void deleteById() {
+        boolean result = service.deleteById(1003);
 
-        assertNotNull(employee);
-        System.out.println(employee);
-
-        assertEquals(true, employee.getId() == 0);
+        assertFalse(result);
     }
 }

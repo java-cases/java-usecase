@@ -10,12 +10,12 @@ import java.util.Arrays;
 
 @Aspect
 @Component
-public class MethodTraceLogAspect {
+public class TraceLogMethodAspect {
 
-    private static final Logger log = LoggerFactory.getLogger(MethodTraceLogAspect.class);
+    private static final Logger log = LoggerFactory.getLogger(TraceLogMethodAspect.class);
 
     //匹配连接点的方法是否有某个注解
-    @Pointcut("@annotation(com.usecase.annotation.MethodTraceLog)")
+    @Pointcut("@annotation(com.usecase.annotation.TraceLogMethod)")
     public void annotationWithMethodCut() {
     }
 
@@ -25,21 +25,21 @@ public class MethodTraceLogAspect {
 
     @Before("annotationWithMethodCut()")
     public void beforeLog(JoinPoint joinPoint) {
-        log.info("MethodTraceLog Before: " + getJoinPointInfo(joinPoint));
+        log.info("TraceLogMethod Before: " + getJoinPointInfo(joinPoint));
     }
 
     @After("annotationWithMethodCut()")
     public void afterLog(JoinPoint joinPoint) {
-        log.info("MethodTraceLog After: " + getJoinPointInfo(joinPoint));
+        log.info("TraceLogMethod After: " + getJoinPointInfo(joinPoint));
     }
 
     @AfterThrowing("annotationWithMethodCut()")
     public void afterThrowingLog(JoinPoint joinPoint) {
-        log.error("MethodTraceLog AfterThrowing: " + getJoinPointInfo(joinPoint));
+        log.error("TraceLogMethod AfterThrowing: " + getJoinPointInfo(joinPoint));
     }
 
     @AfterReturning("annotationWithMethodCut()")
     public void afterReturningLog(JoinPoint joinPoint) {
-        log.info("MethodTraceLog AfterReturning: " + getJoinPointInfo(joinPoint));
+        log.info("TraceLogMethod AfterReturning: " + getJoinPointInfo(joinPoint));
     }
 }
