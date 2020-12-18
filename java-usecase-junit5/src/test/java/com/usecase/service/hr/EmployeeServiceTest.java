@@ -1,13 +1,13 @@
 package com.usecase.service.hr;
 
 import com.usecase.domain.Employee;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.DEFINED_PORT;
 
@@ -22,8 +22,8 @@ public class EmployeeServiceTest {
     public void findEmployee() {
         Employee employee = hrService.findEmployee(1001);
 
-        assertNotNull(employee);
-        assertEquals(1001, (int) employee.getId());
+        assertThat(employee, Matchers.notNullValue());
+        assertThat(employee.getId(), Matchers.is(1001));
     }
 
     @DisplayName("find an employee with invalid id")

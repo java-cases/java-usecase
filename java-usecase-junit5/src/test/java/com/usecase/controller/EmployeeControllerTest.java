@@ -1,5 +1,6 @@
 package com.usecase.controller;
 
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.DEFINED_PORT;
 
 @SpringBootTest(webEnvironment = DEFINED_PORT)
@@ -22,7 +23,7 @@ public class EmployeeControllerTest {
     public void findById() {
         ResponseEntity<Map> entity = restTemplate.getForEntity("/emp/1", Map.class);
 
-        assertEquals(HttpStatus.OK, entity.getStatusCode());
+        assertThat(entity.getStatusCode(), Matchers.is(HttpStatus.OK));
         System.out.println(entity.getBody());
     }
 
@@ -30,7 +31,7 @@ public class EmployeeControllerTest {
     public void findByIdWithInvalidId() {
         ResponseEntity<Map> entity = restTemplate.getForEntity("/emp/-1", Map.class);
 
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, entity.getStatusCode());
+        assertThat(entity.getStatusCode(), Matchers.is(HttpStatus.INTERNAL_SERVER_ERROR));
         System.out.println(entity.getBody());
     }
 
@@ -38,7 +39,7 @@ public class EmployeeControllerTest {
     public void echo() {
         ResponseEntity<String> entity = restTemplate.getForEntity("/emp/echo/hello", String.class);
 
-        assertEquals(HttpStatus.OK, entity.getStatusCode());
+        assertThat(entity.getStatusCode(), Matchers.is(HttpStatus.OK));
         System.out.println(entity.getBody());
     }
 }

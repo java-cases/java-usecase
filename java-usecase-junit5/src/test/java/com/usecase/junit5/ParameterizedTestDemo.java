@@ -1,4 +1,4 @@
-package com.usecase;
+package com.usecase.junit5;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.extension.ExtensionContext;
