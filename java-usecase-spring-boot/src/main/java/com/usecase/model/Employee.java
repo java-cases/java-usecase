@@ -1,4 +1,4 @@
-package com.usecase.domain;
+package com.usecase.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.*;

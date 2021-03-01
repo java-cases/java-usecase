@@ -1,14 +1,26 @@
 package com.usecase.service.hr;
 
-import com.usecase.domain.Employee;
+import com.usecase.config.DBSourceConfig;
+import com.usecase.model.Employee;
 import com.usecase.exception.BadRequestException;
 import com.usecase.exception.RestException;
 import com.usecase.status.RestStatus;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 @Service
 public class EmployeeService implements HRService {
+
+    @Value("${com.usecase.employee.name}")
+    private String name;
+
+    @Value("${com.usecase.employee.age}")
+    private Integer age;
+
+    @Autowired
+    DBSourceConfig dbSourceConfig;
 
     @Override
     public Employee findEmployee(Integer id) throws RestException {
@@ -23,4 +35,16 @@ public class EmployeeService implements HRService {
 
         return new Employee(id, "Employee-" + id, 18);
     }
+
+    @Override
+    public Employee getDefault() {
+        return new Employee(0, this.name, this.age);
+    }
+
+    @Override
+    public DBSourceConfig getDBSource() {
+        return dbSourceConfig;
+    }
+
+
 }

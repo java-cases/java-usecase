@@ -1,4 +1,4 @@
-package com.usecase.domain;
+package com.usecase.model;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;

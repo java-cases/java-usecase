@@ -17,6 +17,15 @@ management:
 demo:
   key: value
 
+com.usecase.employee:
+  name: demo
+  age: 19
+
+com.usecase.dbsource:
+  id: 1
+  name: demo
+  uri: sql-uri
+
 spring:
   application.name: demo-hr-kenly
   profiles.active: prod

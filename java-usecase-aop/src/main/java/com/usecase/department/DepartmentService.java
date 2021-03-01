@@ -1,7 +1,7 @@
 package com.usecase.department;
 
 import com.usecase.annotation.TraceLogMethod;
-import com.usecase.domain.Employee;
+import com.usecase.model.Employee;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,10 +1,11 @@
 package com.usecase.controller;
 
 import com.usecase.annotation.RateLimit;
-import com.usecase.domain.Employee;
+import com.usecase.model.Employee;
 import com.usecase.exception.RestException;
 import com.usecase.service.hr.HRService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -36,6 +37,16 @@ public class EmployeeController {
     @GetMapping("/echo")
     public String echoParam(@RequestParam("something") String something) {
         return something;
+    }
+
+    @GetMapping("/default")
+    public Employee defaultEmployee() {
+        return hrService.getDefault();
+    }
+
+    @GetMapping("/dbsource")
+    public Employee getDBSource() {
+        return hrService.getDefault();
     }
 
     @GetMapping("/{id}")

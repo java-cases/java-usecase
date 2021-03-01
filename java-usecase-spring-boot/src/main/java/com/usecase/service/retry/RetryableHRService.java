@@ -1,6 +1,6 @@
 package com.usecase.service.retry;
 
-import com.usecase.domain.Employee;
+import com.usecase.model.Employee;
 import com.usecase.exception.HRServieException;
 import com.usecase.status.RestStatus;
 import org.slf4j.Logger;

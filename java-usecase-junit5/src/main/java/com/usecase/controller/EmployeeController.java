@@ -1,6 +1,6 @@
 package com.usecase.controller;
 
-import com.usecase.domain.Employee;
+import com.usecase.model.Employee;
 import com.usecase.service.hr.HRService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

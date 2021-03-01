@@ -1,6 +1,6 @@
 package com.usecase.service.hr;
 
-import com.usecase.domain.Employee;
+import com.usecase.model.Employee;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

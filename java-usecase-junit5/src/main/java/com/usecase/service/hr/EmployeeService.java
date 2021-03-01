@@ -1,6 +1,6 @@
 package com.usecase.service.hr;
 
-import com.usecase.domain.Employee;
+import com.usecase.model.Employee;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,4 +1,4 @@
-package com.usecase.domain;
+package com.usecase.model;
 
 public class Employee {
 

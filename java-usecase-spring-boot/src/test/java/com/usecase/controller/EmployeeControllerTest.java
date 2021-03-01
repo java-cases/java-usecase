@@ -1,6 +1,6 @@
 package com.usecase.controller;
 
-import com.usecase.domain.Employee;
+import com.usecase.model.Employee;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

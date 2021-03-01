@@ -1,4 +1,4 @@
-package com.usecase.domain;
+package com.usecase.model;
 
 //import io.swagger.annotations.ApiModelProperty;
 

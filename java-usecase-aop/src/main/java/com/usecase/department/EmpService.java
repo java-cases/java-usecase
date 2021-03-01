@@ -1,6 +1,6 @@
 package com.usecase.department;
 
-import com.usecase.domain.Employee;
+import com.usecase.model.Employee;
 
 public interface EmpService {
     Employee findById(Integer id);

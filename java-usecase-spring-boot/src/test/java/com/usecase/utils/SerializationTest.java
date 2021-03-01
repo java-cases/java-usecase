@@ -1,6 +1,6 @@
 package com.usecase.utils;
 
-import com.usecase.domain.Employee;
+import com.usecase.model.Employee;
 import org.junit.Test;
 
 import java.util.Optional;
