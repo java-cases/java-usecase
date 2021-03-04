@@ -1,6 +1,6 @@
 package com.usecase.mockito;
 
-import com.usecase.service.MockServiceImpl;
+import com.usecase.hr.service.MockServiceImpl;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;

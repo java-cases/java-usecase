@@ -1,6 +1,6 @@
 package com.usecase.department;
 
-import com.usecase.model.Employee;
+import com.usecase.hr.model.Employee;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

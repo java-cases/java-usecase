@@ -1,9 +1,9 @@
 package com.usecase;
 
-import com.usecase.service.price.Price;
-import com.usecase.service.price.PriceCodes;
-import com.usecase.service.rental.Movie;
-import com.usecase.service.rental.Rental;
+import com.usecase.hr.service.price.Price;
+import com.usecase.hr.service.price.PriceCodes;
+import com.usecase.hr.service.rental.Movie;
+import com.usecase.hr.service.rental.Rental;
 import lombok.extern.java.Log;
 
 //@SneakyThrows

@@ -1,6 +1,6 @@
 package com.usecase.guava.common;
 
-import com.usecase.model.Person;
+import com.usecase.hr.model.Person;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

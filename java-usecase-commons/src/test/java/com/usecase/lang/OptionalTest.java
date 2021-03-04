@@ -1,6 +1,6 @@
 package com.usecase.lang;
 
-import com.usecase.model.Employee;
+import com.usecase.hr.model.Employee;
 import org.junit.Assert;
 import org.junit.Test;
 

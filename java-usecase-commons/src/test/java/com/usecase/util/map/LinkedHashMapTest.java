@@ -1,6 +1,6 @@
 package com.usecase.util.map;
 
-import com.usecase.model.Employee;
+import com.usecase.hr.model.Employee;
 import org.junit.Test;
 
 import java.util.LinkedHashMap;

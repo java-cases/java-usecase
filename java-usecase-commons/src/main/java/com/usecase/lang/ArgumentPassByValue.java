@@ -1,7 +1,7 @@
 package com.usecase.lang;
 
 import com.google.common.base.Preconditions;
-import com.usecase.model.Employee;
+import com.usecase.hr.model.Employee;
 
 import java.util.Objects;
 

@@ -1,6 +1,6 @@
 package com.usecase.gson;
 
-import com.usecase.model.Person;
+import com.usecase.hr.model.Person;
 import org.junit.Test;
 
 import java.util.Optional;

@@ -1,6 +1,6 @@
 package com.usecase.util.collection.set;
 
-import com.usecase.model.Season;
+import com.usecase.hr.model.Season;
 import org.junit.Test;
 
 import java.util.EnumSet;

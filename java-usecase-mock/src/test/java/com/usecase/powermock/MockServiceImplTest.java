@@ -1,8 +1,8 @@
 package com.usecase.powermock;
 
 import com.usecase.dao.MockDBMapper;
-import com.usecase.model.DBModel;
-import com.usecase.service.MockServiceImpl;
+import com.usecase.hr.model.DBModel;
+import com.usecase.hr.service.MockServiceImpl;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,6 +1,6 @@
 package com.usecase.dao;
 
-import com.usecase.model.DBModel;
+import com.usecase.hr.model.DBModel;
 
 public interface MockDBMapper {
     int count(DBModel model);

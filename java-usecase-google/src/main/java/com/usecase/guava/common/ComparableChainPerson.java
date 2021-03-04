@@ -1,7 +1,7 @@
 package com.usecase.guava.common;
 
 import com.google.common.collect.ComparisonChain;
-import com.usecase.model.Person;
+import com.usecase.hr.model.Person;
 
 public class ComparableChainPerson extends Person {
 

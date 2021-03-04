@@ -1,6 +1,6 @@
 package com.usecase.powermock;
 
-import com.usecase.service.MockServiceImpl;
+import com.usecase.hr.service.MockServiceImpl;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
