@@ -15,7 +15,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>2.2.0.RELEASE</spring-boot.version>
+        <spring-boot.version>2.5.3</spring-boot.version>
         <guava.version>20.0</guava.version>
         <log4j-to-slf4j.version>2.12.1</log4j-to-slf4j.version>
         <guava-retrying.version>2.0.0</guava-retrying.version>
@@ -25,6 +25,7 @@
         <lombok.version>1.18.6</lombok.version>
         <esapi.version>2.1.0.1</esapi.version>
         <vertx.version>3.5.4</vertx.version>
+        <powermock.version>2.0.2</powermock.version>
     </properties>
 
     <dependencyManagement>
@@ -105,6 +106,18 @@
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-unit</artifactId>
                 <version>${vertx.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>2.0.2</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-mockito2</artifactId>
+                <version>${powermock.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>

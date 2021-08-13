@@ -15,8 +15,10 @@ public class CustomerServiceImp implements CustomerService {
 
     @Autowired
     DBSourceConfig dbSourceConfig;
+
     @Value("${com.usecase.employee.name}")
     private String name;
+
     @Value("${com.usecase.employee.age}")
     private Integer age;
 

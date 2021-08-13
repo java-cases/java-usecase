@@ -23,7 +23,7 @@ public class CustomerController {
     }
 
     @GetMapping(path = "/limit")
-    @RateLimit(perSecond = 1.0, timeOut = 0)
+    @RateLimit(perSecond = 5.0, timeOut = 0)
     public String limit() {
         return "limited";
     }

@@ -19,7 +19,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(webEnvironment = DEFINED_PORT)
-public class EmployeeControllerTest {
+public class EmployeeControllerRestTemplateTest {
 
     @Autowired
     private TestRestTemplate template;

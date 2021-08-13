@@ -48,7 +48,7 @@ public class RateLimitAspect {
 
         if (!rateLimiter.tryAcquire(rateLimit.timeOut(), rateLimit.timeOutUnit())) {
             RestStatus status = RestStatus.builder()
-                    .message("服务器繁忙，请稍后再试!")
+                    .message("Server is busy, please retry later!")
                     .errorCode("PM.001.002")
                     .statusCode(HttpStatus.TOO_MANY_REQUESTS)
                     .build();

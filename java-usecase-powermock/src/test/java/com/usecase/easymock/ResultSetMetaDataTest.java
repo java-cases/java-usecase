@@ -1,6 +1,8 @@
 package com.usecase.easymock;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.sql.rowset.CachedRowSet;
 import java.sql.ResultSetMetaData;
@@ -8,8 +10,8 @@ import java.sql.SQLException;
 
 import static org.junit.Assert.assertEquals;
 
+@RunWith(SpringJUnit4ClassRunner.class)
 public class ResultSetMetaDataTest {
-
 
     @Test
     public void mockResultSetMetaData() throws SQLException {
