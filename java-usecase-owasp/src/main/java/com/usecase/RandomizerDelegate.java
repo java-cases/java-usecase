@@ -1,6 +1,7 @@
-package org.owasp.esapi;
+package com.usecase;
 
-import org.owasp.SecureRandomizer;
+import org.owasp.esapi.ESAPI;
+import org.owasp.esapi.Randomizer;
 import org.owasp.esapi.errors.EncryptionException;
 
 import java.util.Optional;

@@ -1,7 +1,9 @@
 package com.usecase.hamcrestmatcher;
 
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,11 +12,12 @@ import java.util.Map;
 
 import static org.junit.Assert.assertThat;
 
+@RunWith(SpringJUnit4ClassRunner.class)
 public class CollectionMatcher {
 
     //collection相关匹配符
     @Test
-    void assertCases() {
+    public void assertCases() {
         Map<String, String> mapObject = new HashMap<>();
         mapObject.put("key", "value");
 

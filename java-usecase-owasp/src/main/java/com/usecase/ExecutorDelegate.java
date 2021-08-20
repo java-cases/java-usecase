@@ -1,6 +1,8 @@
-package org.owasp.esapi;
+package com.usecase;
 
-import org.owasp.SecureExecutor;
+import org.owasp.esapi.ESAPI;
+import org.owasp.esapi.ExecuteResult;
+import org.owasp.esapi.Executor;
 import org.owasp.esapi.codecs.Codec;
 import org.owasp.esapi.errors.ExecutorException;
 import org.slf4j.Logger;

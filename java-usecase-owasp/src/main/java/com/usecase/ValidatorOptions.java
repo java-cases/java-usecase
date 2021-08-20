@@ -1,4 +1,6 @@
-package org.owasp.esapi;
+package com.usecase;
+
+import org.owasp.esapi.ValidationErrorList;
 
 public class ValidatorOptions {
     public final static int DEFAULT_MAX_LENGTH = 1024 * 1024;

@@ -1,4 +1,4 @@
-package org.owasp;
+package com.usecase;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

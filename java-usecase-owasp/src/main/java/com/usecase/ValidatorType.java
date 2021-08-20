@@ -1,4 +1,4 @@
-package org.owasp;
+package com.usecase;
 
 public enum ValidatorType {
 

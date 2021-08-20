@@ -1,7 +1,6 @@
-package org.owasp;
+package com.usecase;
 
 import org.owasp.esapi.ValidationRule;
-import org.owasp.esapi.ValidatorOptions;
 import org.owasp.esapi.errors.IntrusionException;
 import org.owasp.esapi.errors.ValidationException;
 

@@ -1,11 +1,13 @@
-package org.owasp.esapi;
+package com.usecase;
 
-import org.apache.log4j.spi.LoggerFactory;
-import org.owasp.SecureEncoder;
+import org.owasp.esapi.ESAPI;
+import org.owasp.esapi.Encoder;
 import org.owasp.esapi.codecs.Codec;
 import org.owasp.esapi.codecs.MySQLCodec;
 import org.owasp.esapi.codecs.OracleCodec;
 import org.owasp.esapi.errors.EncodingException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.Optional;

@@ -1,15 +1,18 @@
 package com.usecase.hamcrestmatcher;
 
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.assertThat;
 
+@RunWith(SpringJUnit4ClassRunner.class)
 public class StringMatcher {
 
     //数值相关匹配符
     @Test
-    void assertCases() {
+    public void assertCases() {
         String testedString = "developerWorks";
 
         // containsString匹配符表明如果测试的字符串testedString包含子字符串"developerWorks"则测试通过

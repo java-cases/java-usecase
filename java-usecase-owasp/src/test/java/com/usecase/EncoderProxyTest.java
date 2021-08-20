@@ -1,12 +1,11 @@
-package org.owasp.esapi;
+package com.usecase;
 
-import org.junit.Assert;
-import org.junit.Test;
-import org.owasp.SecureEncoder;
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
-import static org.junit.Assert.assertTrue;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class EncoderProxyTest {
 
@@ -14,7 +13,7 @@ public class EncoderProxyTest {
 
 
     private String getJS() {
-        return "<a href='sdfs'></a> < script > alert(); </ script >";
+        return "<a href='test js'></a> <script> alert(); </script>";
     }
 
 
@@ -28,7 +27,7 @@ public class EncoderProxyTest {
         String input = encoder.encodeForHTML(getJS());
         System.out.println(input);
 
-        Assert.assertFalse(input.contains("<"));
+        assertThat(input, Matchers.not(Matchers.containsString("<")));
     }
 
     @Test
@@ -36,7 +35,7 @@ public class EncoderProxyTest {
         String input = encoder.decodeForHTML(encoder.encodeForHTML(getJS()));
         System.out.println(input);
 
-        assertTrue(input.contains("<"));
+        assertThat(input, Matchers.containsString("<"));
     }
 
     @Test
@@ -57,23 +56,29 @@ public class EncoderProxyTest {
     }
 
     private String getUrl() {
-        return "http://google.com/openapi/v1/ rds";
+        return "http://google.com/openapi/v1/ rds?id=xxx标识";
     }
 
     @Test
     public void encodeForURL() {
-        Optional<String> r = encoder.encodeForURL(this.getUrl());
+        System.out.println(this.getUrl());
+        Optional<String> encoded = encoder.encodeForURL(this.getUrl());
+        System.out.println(encoded.get());
 
-        assertTrue(r.isPresent());
-        System.out.println(r.get());
+        assertThat(encoded.isPresent(), Matchers.is(true));
+
     }
 
     @Test
     public void decodeFromURL() {
-        Optional<String> r = encoder.decodeFromURL(encoder.encodeForURL(this.getUrl()).orElse(""));
+        Optional<String> encoded = encoder.encodeForURL(this.getUrl());
+        System.out.println(encoded.get());
 
-        assertTrue(r.isPresent());
-        System.out.println(r.get());
+        Optional<String> decoded = encoder.decodeFromURL(encoded.orElse(""));
+        System.out.println(decoded.get());
+
+        assertThat(decoded.isPresent(), Matchers.is(true));
+
     }
 
     @Test
@@ -84,8 +89,9 @@ public class EncoderProxyTest {
         String sql = "select name from user where username='" + username + "' and password ='" + password + "'";
         System.out.println(sql);
 
-        assertTrue(username.contains("\'"));
-        Assert.assertFalse(password.equals("password1''"));
+
+        assertThat(username, Matchers.containsString("\\"));
+        assertThat(password, Matchers.is("password1''"));
     }
 
     @Test
@@ -96,7 +102,7 @@ public class EncoderProxyTest {
         String sql = "select name from user where username='" + username + "' and password ='" + password + "'";
         System.out.println(sql);
 
-        assertTrue(username.contains("\'"));
-        Assert.assertFalse(password.equals("password1''"));
+        assertThat(username, Matchers.containsString("\\"));
+        assertThat(password, Matchers.is("password1''"));
     }
 }

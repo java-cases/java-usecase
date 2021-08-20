@@ -1,11 +1,11 @@
-package org.owasp.esapi;
+package com.usecase;
 
-import org.junit.Test;
-import org.owasp.SecureRandomizer;
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
-import static org.junit.Assert.assertTrue;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class RandomizerProxyTest {
 
@@ -57,7 +57,7 @@ public class RandomizerProxyTest {
     public void getRandomGUID() {
         Optional<String> r = randomizer.getRandomGUID();
 
-        assertTrue(r.isPresent());
+        assertThat(r.isPresent(), Matchers.is(true));
         System.out.println(r);
     }
 

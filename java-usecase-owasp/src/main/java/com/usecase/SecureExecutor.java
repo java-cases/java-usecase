@@ -1,4 +1,4 @@
-package org.owasp;
+package com.usecase;
 
 import org.owasp.esapi.ExecuteResult;
 import org.owasp.esapi.codecs.Codec;

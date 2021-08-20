@@ -1,6 +1,7 @@
-package org.owasp.esapi;
+package com.usecase;
 
-import org.owasp.SecureEncryptor;
+import org.owasp.esapi.ESAPI;
+import org.owasp.esapi.Encryptor;
 import org.owasp.esapi.crypto.CipherText;
 import org.owasp.esapi.crypto.PlainText;
 import org.owasp.esapi.errors.EncryptionException;

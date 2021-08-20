@@ -1,4 +1,4 @@
-package org.owasp;
+package com.usecase;
 
 import org.owasp.esapi.crypto.CipherText;
 import org.owasp.esapi.crypto.PlainText;

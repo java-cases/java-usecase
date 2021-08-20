@@ -9,7 +9,7 @@ public class NestedTestDemo {
 
     @Nested
     @DisplayName("First Nested Test")
-    class FirstNestedTest {
+    public class FirstNestedTest {
 
         @Test
         void testCase() {
@@ -19,7 +19,7 @@ public class NestedTestDemo {
 
     @Nested
     @DisplayName("Second Nested Test")
-    class SecondNestedTest {
+    public class SecondNestedTest {
 
         @Test
         void testCase() {

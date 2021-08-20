@@ -23,6 +23,7 @@
         <module>java-usecase-spring-boot</module>
         <module>java-usecase-ratelimit</module>
         <module>java-usecase-aop</module>
+        <module>java-usecase-owasp</module>
         <module>java-usecase-vertx</module>
         <module>java-usecase-http</module>
         <module>java-usecase-staticchecking</module>

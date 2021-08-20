@@ -10,7 +10,6 @@ import io.vertx.ext.unit.TestContext;
 import io.vertx.ext.unit.junit.VertxUnitRunner;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -46,7 +45,7 @@ public class VertxHttpServerTest {
         vertx.createHttpClient().getNow(port, "localhost", "/products/1", responseHandler);
     }
 
-    @Ignore
+
     @Test()
     public void deleteByPathParam(TestContext context) {
         final Async async = context.async();
@@ -62,7 +61,7 @@ public class VertxHttpServerTest {
         vertx.createHttpClient().delete(port, "localhost", "/products/1", responseHandler);
     }
 
-    @Ignore
+
     @Test
     public void getByQueryParam(TestContext context) {
         final Async async = context.async();
