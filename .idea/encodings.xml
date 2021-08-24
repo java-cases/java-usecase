@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/java-usecase-aop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-aop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-apache-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-demo-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-demo-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-google/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-http/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-junit5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-junit5/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-leetcode/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-leetcode/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-lombok/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-owasp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-owasp/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-powermock/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-ratelimit/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-ratelimit/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-spring-boot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-spring-boot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-staticchecking/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-staticchecking/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java-usecase-vertx/src/main/java" charset="UTF-8" />
+  </component>
+</project>

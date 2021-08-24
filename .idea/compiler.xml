@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="java-usecase-apache-commons" />
+        <module name="java-usecase-lombok" />
+        <module name="java-usecase-ratelimit" />
+        <module name="java-usecase-owasp" />
+        <module name="java-usecase-staticchecking" />
+        <module name="java-usecase-powermock" />
+        <module name="java-usecase-google" />
+        <module name="java-usecase-leetcode" />
+        <module name="java-usecase-vertx" />
+        <module name="java-usecase-junit5" />
+        <module name="java-usecase-demo-starter" />
+        <module name="java-usecase-commons" />
+        <module name="java-usecase-http" />
+        <module name="java-usecase-security" />
+        <module name="java-usecase-aop" />
+        <module name="java-usecase-spring-boot" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+</project>
