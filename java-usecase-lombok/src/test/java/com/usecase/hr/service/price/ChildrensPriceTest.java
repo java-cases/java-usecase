@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 
 public class ChildrensPriceTest {
 
-    private Price price = new ChildrensPrice();
+    private final Price price = new ChildrensPrice();
 
     @BeforeAll
     public static void init() {

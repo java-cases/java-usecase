@@ -13,8 +13,6 @@
         <module>java-usecase-dependencies</module>
         <module>java-usecase-parents</module>
         <module>java-usecase-junit5</module>
-        <module>java-usecase-leetcode</module>
-        <module>java-usecase-lombok</module>
         <module>java-usecase-powermock</module>
         <module>java-usecase-google</module>
         <module>java-usecase-apache-commons</module>
@@ -26,6 +24,8 @@
         <module>java-usecase-vertx</module>
         <module>java-usecase-http</module>
         <module>java-usecase-spring-boot</module>
+        <module>java-usecase-leetcode</module>
+        <module>java-usecase-lombok</module>
         <module>java-usecase-commons</module>
         <module>java-usecase-staticchecking</module>
     </modules>

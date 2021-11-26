@@ -23,7 +23,6 @@ public class MockServiceImpl {
     }
 
     public void remove() {
-
     }
 
 }
