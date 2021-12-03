@@ -12,7 +12,7 @@ target/
 .classpath
 
 # idea ignore
-# .idea/
+.idea/sonarlint
 # *.ipr
 # *.iml
 # *.iws
@@ -34,3 +34,4 @@ bin/
 .vscode
 .gradle
 build
+*leetcode/editor/cn/doc/
