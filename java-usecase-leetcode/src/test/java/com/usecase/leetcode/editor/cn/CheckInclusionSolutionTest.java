@@ -3,6 +3,8 @@ package com.usecase.leetcode.editor.cn;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 
+import java.util.PriorityQueue;
+
 import static org.junit.Assert.*;
 
 public class CheckInclusionSolutionTest {
@@ -35,7 +37,7 @@ public class CheckInclusionSolutionTest {
     public void checkInclusion4() {
         Solution solution = new Solution();
         boolean r = solution.checkInclusion("abc", "bbbca");
-
+        PriorityQueue
         assertThat(r, Matchers.is(true));
     }
 }

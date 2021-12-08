@@ -67,7 +67,7 @@ class Solution {
             }
 
             // 当窗口宽度>=子串长度，左侧窗口要收缩
-            while (right - left >= s1.length()) {
+            while (right - left >= needs.size()) {
                 //窗口中匹配子串的字符及其数量与子串相同
                 if (matchedAll(needs, matches)) {
                     return true;
