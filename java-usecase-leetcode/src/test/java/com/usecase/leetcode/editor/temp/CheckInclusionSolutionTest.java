@@ -1,5 +1,6 @@
-package com.usecase.leetcode.editor.cn;
+package com.usecase.leetcode.editor.temp;
 
+import com.usecase.leetcode.editor.cn.Solution;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 
