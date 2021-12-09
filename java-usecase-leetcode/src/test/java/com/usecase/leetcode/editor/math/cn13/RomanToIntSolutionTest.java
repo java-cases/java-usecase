@@ -1,11 +1,11 @@
-package com.usecase.leetcode.editor.cn13;
+package com.usecase.leetcode.editor.math.cn13;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
-class SolutionTest {
+class RomanToIntSolutionTest {
 
     @Test
     void romanToInt() {

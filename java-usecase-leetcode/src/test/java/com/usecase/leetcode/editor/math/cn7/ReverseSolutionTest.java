@@ -1,11 +1,11 @@
-package com.usecase.leetcode.editor.cn7;
+package com.usecase.leetcode.editor.math.cn7;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
-class SolutionTest {
+class ReverseSolutionTest {
 
     @Test
     void reverse() {

@@ -1,12 +1,8 @@
-package com.usecase.leetcode.editor.cn;
+package com.usecase.leetcode.editor.list.cn23;
 
 import com.usecase.leetcode.editor.ListNode;
-import com.usecase.leetcode.editor.TreeNode;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -18,7 +14,6 @@ public class MergeKListsSolutionTest {
                 new ListNode(1).next(3).next(4).head,
                 new ListNode(2).next(6).head};
 
-        /*
         Solution solution = new Solution();
         ListNode mergedNode = solution.mergeKLists(lists);
 
@@ -28,6 +23,5 @@ public class MergeKListsSolutionTest {
             assertThat(mergedNode.val <= mergedNode.next.val, Matchers.is(true));
             mergedNode = mergedNode.next;
         }
-         */
     }
 }

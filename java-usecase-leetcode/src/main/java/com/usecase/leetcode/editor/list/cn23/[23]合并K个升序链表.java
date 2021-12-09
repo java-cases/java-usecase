@@ -48,10 +48,8 @@ package com.usecase.leetcode.editor.list.cn23;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 
-//import com.usecase.leetcode.editor.ListNode;
+import com.usecase.leetcode.editor.ListNode;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
