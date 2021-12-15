@@ -1,4 +1,4 @@
-package com.usecase.leetcode.editor.array.cn303;
+package com.usecase.leetcode.editor.prefixsum.cn303;
 
 import org.hamcrest.Matchers;
 import org.junit.Test;

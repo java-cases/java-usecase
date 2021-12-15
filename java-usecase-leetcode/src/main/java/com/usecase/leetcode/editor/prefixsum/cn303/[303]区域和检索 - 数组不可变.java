@@ -1,4 +1,4 @@
-package com.usecase.leetcode.editor.array.cn303;
+package com.usecase.leetcode.editor.prefixsum.cn303;
 //给定一个整数数组 nums，求出数组从索引 i 到 j（i ≤ j）范围内元素的总和，包含 i、j 两点。
 //
 // 
@@ -50,22 +50,17 @@ class NumArray {
     private final int[] preSums;
 
     public NumArray(int[] nums) {
-        preSums = new int[nums.length];
-        preSums[0] = nums[0]; //第0个元素的前缀和
+        preSums = new int[nums.length + 1];
 
         //每个元素的前缀和
-        for (int i = 1; i < nums.length; i++) {
-            preSums[i] = preSums[i - 1] + nums[i];
+        for (int i = 1; i < preSums.length; i++) {
+            preSums[i] = preSums[i - 1] + nums[i - 1];
         }
     }
 
     public int sumRange(int left, int right) {
-        if (left <= 0) {
-            return preSums[right];
-        }
-
         //含right和left元素在内的元素和
-        return preSums[right] - preSums[left - 1];
+        return preSums[right + 1] - preSums[left];
     }
 }
 
